@@ -18,6 +18,14 @@ int main(int argc, char** argv) {
 
     
     
+    
+    
+    
+    
+    
+    
+    int i = 4;
+            
     return 0;
 }
 
