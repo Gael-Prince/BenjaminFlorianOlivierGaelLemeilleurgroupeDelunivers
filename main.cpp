@@ -37,7 +37,7 @@ void setpixel (int i){pixel =i;nombre=0;}
 };
 
 
-/*void lectureImage(vector<int[2]> matrice)
+/*void lectureImage(vector<int[2]> matrice) n
 {
 
 
