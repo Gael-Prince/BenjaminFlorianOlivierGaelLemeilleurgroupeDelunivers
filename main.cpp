@@ -1,4 +1,4 @@
-=/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -77,9 +77,29 @@ int main(int argc, char** argv) {
 
     for(int i(0) ; i<256 ; i++)
 
-        cout << "pixel : " <<matrice[i].getPixel() <<"      "<< "nombre : " <<matrice[i].getNombre() << endl;
+        cout << "pixel : " <<matrice[i].getPixel() <<"      "<< "nombre : " <<matrice[i].getNombre() << endl ;
 
     imageChargee.close();
+
+    histogramme<<"P2";
+    histogramme<<endl;
+    histogramme<<"# histo.pgm" <<endl << 257 << " " << 257 << endl << 255 << endl;
+
+    for( int k=0 ; k < 257 ; k++)
+    {
+        histogramme<<k<<" ";
+        for( int l=1 ; l < 257 ; l++)
+        {
+            if (l<matrice[k].getNombre())
+                histogramme<<255<<" ";
+            else
+                histogramme<<0<<" ";
+
+        }
+         histogramme << endl;
+    }
+
+
 
     return 0;
 }
