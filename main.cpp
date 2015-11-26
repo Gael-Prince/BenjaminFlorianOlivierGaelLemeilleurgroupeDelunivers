@@ -1,4 +1,4 @@
-/*
+=/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -37,12 +37,7 @@ void setpixel (int i){pixel =i;nombre=0;}
 };
 
 
-/*void lectureImage(vector<int[2]> matrice) n
-{
 
-
-
-}*/
 
 int main(int argc, char** argv) {
 
@@ -53,7 +48,7 @@ int main(int argc, char** argv) {
     {
         c.setpixel(i);
         matrice.push_back(c);
-        cout << "pixel : " <<matrice[i].getPixel() <<"      "<< "nombre : " <<matrice[i].getNombre() << endl;
+
     }
 
     int lon, lar, maxGris, pixel;
@@ -79,6 +74,10 @@ int main(int argc, char** argv) {
             matrice[pixel].plusone();
         }
     }
+
+    for(int i(0) ; i<256 ; i++)
+
+        cout << "pixel : " <<matrice[i].getPixel() <<"      "<< "nombre : " <<matrice[i].getNombre() << endl;
 
     imageChargee.close();
 
